@@ -18,10 +18,22 @@ const Book = ({ title = "Manual Book" }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [pages, setPages] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Konfigurasi: Tentukan jumlah halaman manual Anda di sini
   // Atau biarkan kosong untuk auto-detect (akan mencoba hingga page tidak ditemukan)
   const TOTAL_PAGES = 6; // Ganti dengan jumlah halaman yang sesuai
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     // Load semua gambar dari folder public/manuals/
@@ -105,12 +117,12 @@ const Book = ({ title = "Manual Book" }) => {
       <div className="book-wrapper">
         <HTMLFlipBook
           ref={bookRef}
-          width={550}
-          height={733}
+          width={isMobile ? 300 : 550}
+          height={isMobile ? 400 : 733}
           size="stretch"
-          minWidth={315}
+          minWidth={280}
           maxWidth={1000}
-          minHeight={400}
+          minHeight={350}
           maxHeight={1533}
           maxShadowOpacity={0.5}
           showCover={true}
@@ -120,7 +132,7 @@ const Book = ({ title = "Manual Book" }) => {
           style={{}}
           startPage={0}
           drawShadow={true}
-          flippingTime={1000}
+          flippingTime={800}
           usePortrait={true}
           startZIndex={0}
           autoSize={true}
@@ -173,7 +185,7 @@ const Book = ({ title = "Manual Book" }) => {
 
       {/* Instructions */}
       <div className="instructions">
-        <p>💡 Tips: Klik pada ujung halaman atau gunakan tombol navigasi untuk berpindah halaman</p>
+        <p>💡 {isMobile ? 'Swipe atau tap ujung halaman untuk flip' : 'Klik pada ujung halaman atau gunakan tombol navigasi untuk berpindah halaman'}</p>
       </div>
     </div>
   );

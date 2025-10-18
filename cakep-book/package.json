@@ -1,8 +1,11 @@
 {
   "name": "cakep-book",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Cakep.id Manual Book - AI-Powered Asset Maintenance for Oil & Gas Industry",
+  "author": "Cakep.id Team",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -20,16 +20,21 @@ const Home = () => {
       {/* Header Section */}
       <header className="home-header">
         <div className="header-content">
-          <h1 className="main-title">📖 Interactive Manual Book</h1>
+          <h1 className="main-title">
+            <span className="logo-icon">🤖</span> Cakep.id Manual Book
+          </h1>
           <p className="subtitle">
-            Flip through pages with realistic book experience
+            AI-Powered Asset Maintenance for Oil & Gas Industry
+          </p>
+          <p className="tagline">
+            Your Complete Guide to Smart Industrial Asset Management
           </p>
         </div>
       </header>
 
       {/* Book Section */}
       <main className="home-main">
-        <Book title="Product Manual Guide" />
+        <Book title="Cakep.id User Guide" />
       </main>
 
       {/* Footer */}

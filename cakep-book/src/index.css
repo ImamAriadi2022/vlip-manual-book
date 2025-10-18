@@ -1,4 +1,4 @@
-/* Global Styles untuk Manual Book App */
+/* Global Styles untuk Manual Book App - Cakep.id Theme */
 :root {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -8,6 +8,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Prevent zoom on mobile double tap */
+  touch-action: manipulation;
 }
 
 /* Reset default styles */
@@ -15,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -22,8 +26,11 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* Cakep.id theme - Professional dark blue for oil & gas industry */
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
   overflow-x: hidden;
+  /* Prevent overscroll on mobile */
+  overscroll-behavior: none;
 }
 
 #root {
@@ -67,27 +74,28 @@ img {
 
 /* Scrollbar styling (untuk browser berbasis Webkit) */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
+  background: rgba(79, 195, 247, 0.5);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(79, 195, 247, 0.7);
 }
 
 /* Utility classes */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 /* Accessibility */
@@ -101,5 +109,26 @@ img {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* Mobile specific optimizations */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* Prevent text size adjustment on orientation change */
+  html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
 }
 

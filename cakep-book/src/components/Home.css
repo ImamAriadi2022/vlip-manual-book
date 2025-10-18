@@ -1,37 +1,57 @@
-/* Home Page Styling */
+/* Home Page Styling - Cakep.id Theme */
 .home {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* Oil & Gas industry theme - Professional blue gradient */
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
   display: flex;
   flex-direction: column;
 }
 
 /* Header Section */
 .home-header {
-  padding: 40px 20px 20px;
+  padding: 30px 20px 20px;
   text-align: center;
 }
 
 .header-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .main-title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: white;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-weight: 800;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  letter-spacing: -1px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.logo-icon {
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.3rem;
+  color: #4fc3f7;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 400;
   margin: 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-style: italic;
 }
 
 /* Main Content */
@@ -49,7 +69,7 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
 
@@ -57,38 +77,66 @@
   margin: 0;
 }
 
-/* Responsive Design */
+/* Responsive Design - Mobile First */
 @media (max-width: 768px) {
   .home-header {
-    padding: 30px 20px 15px;
+    padding: 20px 15px 15px;
   }
 
   .main-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
   }
 
   .subtitle {
     font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
   }
 
   .home-main {
-    padding: 10px;
+    padding: 10px 5px;
   }
 
   .home-footer {
-    padding: 15px;
+    padding: 15px 10px;
     font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
+  .home-header {
+    padding: 15px 10px 10px;
+  }
+
   .main-title {
     font-size: 1.5rem;
+    letter-spacing: -0.3px;
+  }
+
+  .logo-icon {
+    font-size: 1.8rem;
   }
 
   .subtitle {
     font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .tagline {
+    font-size: 0.75rem;
+    padding: 0 10px;
+  }
+
+  .home-main {
+    padding: 5px;
   }
 }
 
