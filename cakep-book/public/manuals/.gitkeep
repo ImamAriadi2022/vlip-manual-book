@@ -1,0 +1,22 @@
+# Folder untuk menyimpan gambar manual book
+
+## Cara penggunaan:
+1. Tambahkan gambar dengan format: page1.png, page2.png, page3.png, dst.
+2. Format yang didukung: PNG, JPG, JPEG
+3. Resolusi rekomendasi: 550x733 pixels atau rasio yang sama
+4. Compress gambar untuk performa optimal
+
+## Contoh struktur:
+```
+manuals/
+├── page1.png
+├── page2.png
+├── page3.png
+├── page4.png
+└── ...
+```
+
+## Tips:
+- Gunakan nama file yang konsisten (page1, page2, dst.)
+- Jangan gunakan spasi dalam nama file
+- Pastikan semua gambar memiliki resolusi yang sama untuk hasil terbaik
