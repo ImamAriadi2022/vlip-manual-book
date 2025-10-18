@@ -98,7 +98,7 @@ const Book = ({ title = "Manual Book" }) => {
     return (
       <div className="book-container">
         <div className="loading">
-          <p>Loading manual book...</p>
+          <p>Memuat manual book...</p>
           <p className="note">
             Catatan: Pastikan gambar sudah ada di folder <code>public/manuals/</code>
             <br />
@@ -148,9 +148,9 @@ const Book = ({ title = "Manual Book" }) => {
               <div className="page-content">
                 <img 
                   src={page} 
-                  alt={`Page ${index + 1}`}
+                  alt={`Halaman ${index + 1}`}
                   onError={(e) => {
-                    e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="550" height="733"%3E%3Crect fill="%23f0f0f0" width="550" height="733"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" fill="%23999"%3EPage ' + (index + 1) + ' not found%3C/text%3E%3C/svg%3E';
+                    e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="550" height="733"%3E%3Crect fill="%23f0f0f0" width="550" height="733"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" fill="%23999"%3EHalaman ' + (index + 1) + ' tidak ditemukan%3C/text%3E%3C/svg%3E';
                   }}
                 />
                 <div className="page-number">{index + 1}</div>
@@ -167,11 +167,11 @@ const Book = ({ title = "Manual Book" }) => {
           onClick={prevPage}
           disabled={currentPage === 0}
         >
-          ← Previous
+          ← Sebelumnya
         </button>
         
         <span className="page-indicator">
-          Page {currentPage + 1} of {totalPages}
+          Halaman {currentPage + 1} dari {totalPages}
         </span>
         
         <button 
@@ -179,7 +179,7 @@ const Book = ({ title = "Manual Book" }) => {
           onClick={nextPage}
           disabled={currentPage >= totalPages - 1}
         >
-          Next →
+          Selanjutnya →
         </button>
       </div>
 

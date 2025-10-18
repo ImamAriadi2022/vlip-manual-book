@@ -59,7 +59,7 @@ def create_placeholder_images(num_pages=6, output_dir="public/manuals"):
             font_small = ImageFont.load_default()
         
         # Judul halaman
-        title = f"Page {i}"
+        title = f"Halaman {i}"
         
         # Hitung posisi teks untuk center alignment
         # Note: textbbox returns (left, top, right, bottom)
@@ -76,7 +76,7 @@ def create_placeholder_images(num_pages=6, output_dir="public/manuals"):
         draw.text((x, y), title, fill='white', font=font_large)
         
         # Tambahkan subtitle
-        subtitle = "Manual Book Demo"
+        subtitle = "Manual Book Cakep.id"
         bbox_sub = draw.textbbox((0, 0), subtitle, font=font_small)
         text_width_sub = bbox_sub[2] - bbox_sub[0]
         x_sub = (width - text_width_sub) // 2
@@ -87,17 +87,17 @@ def create_placeholder_images(num_pages=6, output_dir="public/manuals"):
         # Simpan image
         filename = os.path.join(output_dir, f"page{i}.png")
         img.save(filename, quality=95)
-        print(f"✓ Created: {filename}")
+        print(f"✓ Berhasil dibuat: {filename}")
     
-    print(f"\n✨ Successfully generated {num_pages} placeholder images!")
-    print(f"📁 Location: {output_dir}/")
+    print(f"\n✨ Berhasil generate {num_pages} gambar placeholder!")
+    print(f"📁 Lokasi: {output_dir}/")
     print("\n💡 Tips:")
-    print("   - Replace these images with your actual manual pages")
-    print("   - Keep the naming format: page1.png, page2.png, etc.")
-    print("   - Recommended resolution: 550x733 pixels")
+    print("   - Ganti gambar ini dengan halaman manual asli Anda")
+    print("   - Pertahankan format penamaan: page1.png, page2.png, dst.")
+    print("   - Resolusi yang direkomendasikan: 550x733 pixels")
 
 if __name__ == "__main__":
-    print("🎨 Generating placeholder images for manual book...\n")
+    print("🎨 Membuat gambar placeholder untuk manual book...\n")
     
     # Generate 6 halaman placeholder
     create_placeholder_images(num_pages=6)
