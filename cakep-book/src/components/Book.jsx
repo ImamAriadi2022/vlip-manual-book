@@ -22,7 +22,7 @@ const Book = ({ title = "Manual Book" }) => {
 
   // Konfigurasi: Tentukan jumlah halaman manual Anda di sini
   // Atau biarkan kosong untuk auto-detect (akan mencoba hingga page tidak ditemukan)
-  const TOTAL_PAGES = 6; // Ganti dengan jumlah halaman yang sesuai
+  const TOTAL_PAGES = 9; // Ganti dengan jumlah halaman yang sesuai
 
   // Detect mobile device
   useEffect(() => {
